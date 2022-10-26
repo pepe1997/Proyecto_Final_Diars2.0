@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entCiudad
+namespace LogicaNegocio
 {
-    class Class1
+    public class logEstadoCliente
     {
     }
 }

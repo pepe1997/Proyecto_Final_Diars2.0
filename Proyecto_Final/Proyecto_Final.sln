@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entEstadoCliente", "entEsta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNegocio\LogicaNegocio.csproj", "{3C4FE91D-BE19-45A3-89C4-B84F0D87F55A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaWeb", "SistemaWeb\SistemaWeb.csproj", "{C4444591-B698-447D-9B23-9B2F6E06823A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{3C4FE91D-BE19-45A3-89C4-B84F0D87F55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C4FE91D-BE19-45A3-89C4-B84F0D87F55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C4FE91D-BE19-45A3-89C4-B84F0D87F55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4444591-B698-447D-9B23-9B2F6E06823A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4444591-B698-447D-9B23-9B2F6E06823A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4444591-B698-447D-9B23-9B2F6E06823A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4444591-B698-447D-9B23-9B2F6E06823A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{3A713EC5-33F5-4B8A-B65C-636B34D3D90E} = {91A53620-D6A7-423D-AF5F-DFD1EBBD8E90}
 		{31B2A660-631B-433B-8A32-0D8137F87757} = {91A53620-D6A7-423D-AF5F-DFD1EBBD8E90}
 		{3C4FE91D-BE19-45A3-89C4-B84F0D87F55A} = {577FB8E6-769B-4014-B4BF-706572B8798E}
+		{C4444591-B698-447D-9B23-9B2F6E06823A} = {EB51F2E8-AFC0-48E8-868F-4A3A6989AA10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A378217-C0AA-4EEF-9332-D6DFEAE022CB}

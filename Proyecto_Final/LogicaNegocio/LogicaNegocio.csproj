@@ -44,10 +44,10 @@
     <Compile Include="logCiudad.cs" />
     <Compile Include="logCliente.cs" />
     <Compile Include="logEstadoCliente.cs" />
-    <Compile Include="logEstadoServicio.cs" />
-    <Compile Include="logServicio.cs" />
+    <Compile Include="logEstadoHabitacion.cs" />
+    <Compile Include="logHabitacion.cs" />
     <Compile Include="logTipoCliente.cs" />
-    <Compile Include="logTipoServicio.cs" />
+    <Compile Include="logTipoHabitacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,13 +67,13 @@
       <Project>{31b2a660-631b-433b-8a32-0d8137f87757}</Project>
       <Name>entEstadoCliente</Name>
     </ProjectReference>
-    <ProjectReference Include="..\entServicio\entServicio.csproj">
-      <Project>{d307f40f-3b99-483c-975d-739bdc456aa6}</Project>
-      <Name>entServicio</Name>
-    </ProjectReference>
     <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
       <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>
       <Name>entTipoCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
+      <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
+      <Name>entTipoHabitacion</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

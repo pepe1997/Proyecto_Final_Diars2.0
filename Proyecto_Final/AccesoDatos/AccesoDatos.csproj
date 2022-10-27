@@ -48,6 +48,26 @@
     <Compile Include="DaoEntidades\datTipoCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\entCiudad\entCiudad.csproj">
+      <Project>{c8ba6dcf-b80c-453b-b764-8999f4eb91c6}</Project>
+      <Name>entCiudad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entCliente\entCliente.csproj">
+      <Project>{621a0b1d-c397-4aba-b09b-23c6b2551697}</Project>
+      <Name>entCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entEstadoCliente\entEstadoCliente.csproj">
+      <Project>{31b2a660-631b-433b-8a32-0d8137f87757}</Project>
+      <Name>entEstadoCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
+      <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>
+      <Name>entTipoCliente</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

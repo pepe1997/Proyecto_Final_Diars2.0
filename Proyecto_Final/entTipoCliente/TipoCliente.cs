@@ -8,5 +8,7 @@ namespace entTipoCliente
 {
     public class TipoCliente
     {
+        public int idTipCliente { get; set; }
+        public String desTipCliente { get; set; }
     }
 }

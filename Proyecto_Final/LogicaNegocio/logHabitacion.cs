@@ -36,7 +36,7 @@ namespace LogicaNegocio
             }
 
         }
-        public Boolean InsertarCliente(Habitacion Cli)
+        public Boolean InsertarHabitacion(Habitacion Cli)
         {
             try
             {

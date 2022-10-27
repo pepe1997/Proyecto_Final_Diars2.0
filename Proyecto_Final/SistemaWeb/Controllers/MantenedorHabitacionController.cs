@@ -15,42 +15,34 @@ namespace SistemaWeb.Controllers
         // GET: MantenedorHabitacion
         public ActionResult ListarHabitacion()
         {
-            List<Habitacion> listaHabitacion= logHabitacion.Instancia.ListarCliente();
-            ViewBag.lista = listaCliente;
-            return View(listaCliente);
+            List<Habitacion> listaHabitacion= logHabitacion.Instancia.ListarHabitacion();
+            ViewBag.lista = listaHabitacion;
+            return View(listaHabitacion);
         }
 
         [HttpGet]
-        public ActionResult InsertarCliente()
+        public ActionResult InsertarHabitacion()
         {
 
-            List<TipoCliente> listaTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();
-            var lsTipoCliente = new SelectList(listaTipoCliente, "idTipCliente", "desTipCliente");
-            ViewBag.listaTipoCliente = lsTipoCliente;
-
-            List<Ciudad> listaCiudad = logCiudad.Instancia.ListarCiudad();
-            var lsCiudad = new SelectList(listaCiudad, "idCiudad", "desCiudad");
-            ViewBag.listaCiudad = lsCiudad;
-
+            List<TipoHabitacion> listaTipoHabitacion = logTipoHabitacion.Instancia.ListarTipoHabitacion();
+            var lsTipoHabitacion = new SelectList(listaTipoHabitacion,"idTipoHabitacion","nombTipoHabitacion");
+            ViewBag.listaTipoHabitacion = lsTipoHabitacion;
 
             return View();
         }
         [HttpPost]
-        public ActionResult InsertarCliente(Cliente Cli, FormCollection frm)
+        public ActionResult InsertarHabitacion(Habitacion Cli, FormCollection frm)
         {
             try
             {
 
-                Cli.idTipoCliente = new TipoCliente();
-                Cli.idTipoCliente.idTipCliente = Convert.ToInt32(frm["cboTipoCliente"]);
+                Cli.idTipoHabitacion = new TipoHabitacion();
+                Cli.idTipoHabitacion.idTipoHabitacion = Convert.ToInt32(frm["cboTipoHabitacion"]);
 
-                Cli.idCiudad = new Ciudad();
-                Cli.idCiudad.idCiudad = Convert.ToInt32(frm["cboCiudad"]);
-
-                Boolean inserta = logCliente.Instancia.InsertarCliente(Cli);
+                Boolean inserta = logHabitacion.Instancia.InsertarHabitacion(Cli);
                 if (inserta)
                 {
-                    return RedirectToAction("ListarCliente");
+                    return RedirectToAction("ListarHabitacion");
                 }
                 else
                 {
@@ -60,42 +52,37 @@ namespace SistemaWeb.Controllers
 
             catch (ApplicationException ex)
             {
-                return RedirectToAction("InsertarCliente", new { mesjExceptio = ex.Message });
+                return RedirectToAction("InsertarHabitacion", new { mesjExceptio = ex.Message });
             }
         }
 
         [HttpGet]
-        public ActionResult EditarCliente(int idCliente)
+        public ActionResult EditarHabitacion(int idHabitacion)
         {
 
-            Cliente Cli = new Cliente();
-            Cli = logCliente.Instancia.BuscarCliente(idCliente);
+            Habitacion Cli = new Habitacion();
+            Cli = logHabitacion.Instancia.BuscarHabitacion(idHabitacion);
 
-            List<Ciudad> listaCiudad = logCiudad.Instancia.ListarCiudad();
-            var lsCiudad = new SelectList(listaCiudad, "idCiudad", "desCiudad", Cli.idCiudad.idCiudad);
-            ViewBag.listaCiudad = lsCiudad;
-            List<TipoCliente> listaTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();
-            var lsTipoCliente = new SelectList(listaTipoCliente, "idTipCliente",
-           "desTipCliente", Cli.idTipoCliente.idTipCliente);
-            ViewBag.listaTipoCliente = lsTipoCliente;
+            List<TipoHabitacion> listaTipoHabitacion = logTipoHabitacion.Instancia.ListarTipoHabitacion();
+            var lsTipoHabitacion = new SelectList(listaTipoHabitacion, "idTipCliente", "nombTipoHabitacion", Cli.idTipoHabitacion.idTipoHabitacion);
+            ViewBag.listaTipoHabitacion = lsTipoHabitacion;
 
             return View(Cli);
         }
         [HttpPost]
-        public ActionResult EditarCliente(Cliente Cli, FormCollection frm)
+        public ActionResult EditarHabitacion(Habitacion Cli, FormCollection frm)
         {
-            Cli.idCiudad = new Ciudad();
-            Cli.idCiudad.idCiudad = Convert.ToInt32(frm["cboCiudad"]);
 
-            Cli.idTipoCliente = new TipoCliente();
-            Cli.idTipoCliente.idTipCliente = Convert.ToInt32(frm["cboTipoCliente"]);
+
+            Cli.idTipoHabitacion = new TipoHabitacion();
+            Cli.idTipoHabitacion.idTipoHabitacion = Convert.ToInt32(frm["cboTipoHabitacion"]);
 
             try
             {
-                Boolean edita = logCliente.Instancia.EditaCliente(Cli);
+                Boolean edita = logHabitacion.Instancia.EditaHabitacion(Cli);
                 if (edita)
                 {
-                    return RedirectToAction("ListarCliente");
+                    return RedirectToAction("ListarHabitacion");
                 }
                 else
                 {
@@ -105,28 +92,28 @@ namespace SistemaWeb.Controllers
 
             catch (ApplicationException ex)
             {
-                return RedirectToAction("EditarCliente", new { mesjExceptio = ex.Message });
+                return RedirectToAction("EditarHabitacion", new { mesjExceptio = ex.Message });
             }
 
         }
 
-        public ActionResult EliminarCliente(int idCliente)
+        public ActionResult CambiarEstadoHabitacion(int idHabitacion)
         {
 
-            Cliente Cli = new Cliente();
-            Cli = logCliente.Instancia.BuscarCliente(idCliente);
+            Habitacion Cli = new Habitacion();
+            Cli = logHabitacion.Instancia.BuscarHabitacion(idHabitacion);
             return View(Cli);
         }
         [HttpPost]
-        public ActionResult EliminarCliente(Cliente Cli)
+        public ActionResult EliminarHabitacion(Habitacion Cli)
         {
 
             try
             {
-                Boolean elimina = logCliente.Instancia.EliminarCliente(Cli);
+                Boolean elimina = logHabitacion.Instancia.CambiarEstado(Cli);
                 if (elimina)
                 {
-                    return RedirectToAction("ListarCliente");
+                    return RedirectToAction("ListarHabitacion");
                 }
                 else
                 {
@@ -136,7 +123,7 @@ namespace SistemaWeb.Controllers
 
             catch (ApplicationException ex)
             {
-                return RedirectToAction("EliminarCliente", new { mesjExceptio = ex.Message });
+                return RedirectToAction("EliminarHabitacion", new { mesjExceptio = ex.Message });
             }
 
         }

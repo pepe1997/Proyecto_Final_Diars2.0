@@ -88,6 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -104,6 +105,16 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\MantenedorCliente\ListarCliente.cshtml" />
+    <Content Include="Views\MantenedorCliente\InsertarCliente.cshtml" />
+    <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
+    <Content Include="Views\MantenedorCliente\EliminarCliente.cshtml" />
+    <Content Include="Views\MantenedorHabitacion\ListarHabitacion.cshtml" />
+    <Content Include="Views\MantenedorHabitacion\InsertarHabitacion.cshtml" />
+    <Content Include="Views\MantenedorHabitacion\EditarHabitacion.cshtml" />
+    <Content Include="Views\MantenedorHabitacion\CambiarEstadoHabitacion.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -114,8 +125,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\MantenedorCliente\" />
-    <Folder Include="Views\MantenedorHabitacion\" />
     <Folder Include="Views\MantenedorServicio\" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +151,10 @@
     <ProjectReference Include="..\entHabitacion\entHabitacion.csproj">
       <Project>{6ad1bb58-fb5b-4a12-b980-bd6319bdaa3c}</Project>
       <Name>entHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entServicio\entServicio.csproj">
+      <Project>{d307f40f-3b99-483c-975d-739bdc456aa6}</Project>
+      <Name>entServicio</Name>
     </ProjectReference>
     <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
       <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>

@@ -15,5 +15,7 @@ namespace entHabitacion
         public int numPisoHabitacion { get; set; }
         public TipoHabitacion idTipoHabitacion { get; set; }
         public EstadoHabitacion idEstHabitacion { get; set; }
+        
+
     }
 }

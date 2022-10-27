@@ -7,81 +7,82 @@
 <h2>ListarCliente</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Cliente", "InsertarCliente")
 </p>
-<table class="table">
+<table border="1px" cellspacing="0px" cellpadding="10px" class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.idCliente)
+            ID
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.nombCliente)
+            Nombre
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.apelCliente)
+            Apellido
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.direcCliente)
+            Direccion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.celular)
+            Celular
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.dni)
+            Dni
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fecRegCliente)
+            Fecha Registro
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.idTipoCliente)
+            Tipo Cliente
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.idEstCliente)
+            Estado Cliente
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.idCiudad)
+            Ciudad
         </th>
-        <th></th>
+        <th>
+            Operaciones
+        </th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.idCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.apelCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.direcCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.celular)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dni)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fecRegCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idTipoCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idEstCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idCiudad)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.idCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.nombCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.apelCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.direcCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.celular)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.dni)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fecRegCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.idTipoCliente.desTipCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.idEstCliente.desEstCliente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.idCiudad.desCiudad)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "EditarCliente", new { idCliente = @item.idCliente }) |
+        @Html.ActionLink("Eliminar", "EliminarCliente", new { idCliente = @item.idCliente })
+    </td>
+</tr>
 }
 
 </table>

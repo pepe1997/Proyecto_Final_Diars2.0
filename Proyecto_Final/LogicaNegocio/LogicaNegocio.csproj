@@ -45,12 +45,19 @@
     <Compile Include="logCliente.cs" />
     <Compile Include="logEstadoCliente.cs" />
     <Compile Include="logEstadoHabitacion.cs" />
+    <Compile Include="logEstadoServicio.cs" />
     <Compile Include="logHabitacion.cs" />
+    <Compile Include="logServicio.cs" />
     <Compile Include="logTipoCliente.cs" />
     <Compile Include="logTipoHabitacion.cs" />
+    <Compile Include="logTipoServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{F94C8C55-694F-4E7C-B9B6-6D6DC6D1B7E0}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
       <Project>{f94c8c55-694f-4e7c-b9b6-6d6dc6d1b7e0}</Project>
       <Name>AccesoDatos</Name>

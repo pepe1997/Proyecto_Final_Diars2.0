@@ -42,13 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDatos\Conexion.cs" />
-    <Compile Include="DaoEntidades\datCiudad.cs" />
-    <Compile Include="DaoEntidades\datCliente.cs" />
-    <Compile Include="DaoEntidades\datEstadoCliente.cs" />
-    <Compile Include="DaoEntidades\datEstadoHabitacion.cs" />
-    <Compile Include="DaoEntidades\datHabitacion.cs" />
-    <Compile Include="DaoEntidades\datTipoCliente.cs" />
-    <Compile Include="DaoEntidades\datTipoHabitacion.cs" />
+    <Compile Include="DatCliente\datCiudad.cs" />
+    <Compile Include="DatCliente\datCliente.cs" />
+    <Compile Include="DatCliente\datEstadoCliente.cs" />
+    <Compile Include="DatHabitacion\datEstadoHabitacion.cs" />
+    <Compile Include="DatHabitacion\datHabitacion.cs" />
+    <Compile Include="DatCliente\datTipoCliente.cs" />
+    <Compile Include="DatHabitacion\datTipoHabitacion.cs" />
     <Compile Include="DatServicio\datEstadoServicio.cs" />
     <Compile Include="DatServicio\datServicio.cs" />
     <Compile Include="DatServicio\datTipoServicio.cs" />

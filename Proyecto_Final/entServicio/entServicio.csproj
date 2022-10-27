@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C4FE91D-BE19-45A3-89C4-B84F0D87F55A}</ProjectGuid>
+    <ProjectGuid>{D307F40F-3B99-483C-975D-739BDC456AA6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogicaNegocio</RootNamespace>
-    <AssemblyName>LogicaNegocio</AssemblyName>
+    <RootNamespace>entServicio</RootNamespace>
+    <AssemblyName>entServicio</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,36 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="logCiudad.cs" />
-    <Compile Include="logCliente.cs" />
-    <Compile Include="logEstadoCliente.cs" />
-    <Compile Include="logEstadoHabitacion.cs" />
-    <Compile Include="logHabitacion.cs" />
-    <Compile Include="logTipoCliente.cs" />
-    <Compile Include="logTipoHabitacion.cs" />
+    <Compile Include="EstadoServicio.cs" />
+    <Compile Include="Servicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\entCiudad\entCiudad.csproj">
-      <Project>{c8ba6dcf-b80c-453b-b764-8999f4eb91c6}</Project>
-      <Name>entCiudad</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\entCliente\entCliente.csproj">
-      <Project>{621a0b1d-c397-4aba-b09b-23c6b2551697}</Project>
-      <Name>entCliente</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\entEstadoCliente\entEstadoCliente.csproj">
-      <Project>{31b2a660-631b-433b-8a32-0d8137f87757}</Project>
-      <Name>entEstadoCliente</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
-      <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>
-      <Name>entTipoCliente</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
-      <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
-      <Name>entTipoHabitacion</Name>
-    </ProjectReference>
+    <Compile Include="TipoServicio.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

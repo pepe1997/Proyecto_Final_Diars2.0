@@ -49,6 +49,9 @@
     <Compile Include="DaoEntidades\datHabitacion.cs" />
     <Compile Include="DaoEntidades\datTipoCliente.cs" />
     <Compile Include="DaoEntidades\datTipoHabitacion.cs" />
+    <Compile Include="DatServicio\datEstadoServicio.cs" />
+    <Compile Include="DatServicio\datServicio.cs" />
+    <Compile Include="DatServicio\datTipoServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +77,10 @@
     <ProjectReference Include="..\entHabitacion\entHabitacion.csproj">
       <Project>{6ad1bb58-fb5b-4a12-b980-bd6319bdaa3c}</Project>
       <Name>entHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entServicio\entServicio.csproj">
+      <Project>{d307f40f-3b99-483c-975d-739bdc456aa6}</Project>
+      <Name>entServicio</Name>
     </ProjectReference>
     <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
       <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>

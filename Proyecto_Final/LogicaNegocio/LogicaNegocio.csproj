@@ -51,6 +51,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{f94c8c55-694f-4e7c-b9b6-6d6dc6d1b7e0}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\entCiudad\entCiudad.csproj">
       <Project>{c8ba6dcf-b80c-453b-b764-8999f4eb91c6}</Project>
       <Name>entCiudad</Name>
@@ -62,6 +66,18 @@
     <ProjectReference Include="..\entEstadoCliente\entEstadoCliente.csproj">
       <Project>{31b2a660-631b-433b-8a32-0d8137f87757}</Project>
       <Name>entEstadoCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entEstadoHabitacion\entEstadoHabitacion.csproj">
+      <Project>{f242e5df-6ad2-49c9-9474-dbf0da60da4d}</Project>
+      <Name>entEstadoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entHabitacion\entHabitacion.csproj">
+      <Project>{6ad1bb58-fb5b-4a12-b980-bd6319bdaa3c}</Project>
+      <Name>entHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entServicio\entServicio.csproj">
+      <Project>{d307f40f-3b99-483c-975d-739bdc456aa6}</Project>
+      <Name>entServicio</Name>
     </ProjectReference>
     <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
       <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>

@@ -93,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\MantenedorClienteController.cs" />
+    <Compile Include="Controllers\MantenedorHabitacionController.cs" />
+    <Compile Include="Controllers\MantenedorServicioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -110,8 +113,48 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\MantenedorCliente\" />
+    <Folder Include="Views\MantenedorHabitacion\" />
+    <Folder Include="Views\MantenedorServicio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{f94c8c55-694f-4e7c-b9b6-6d6dc6d1b7e0}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entCiudad\entCiudad.csproj">
+      <Project>{c8ba6dcf-b80c-453b-b764-8999f4eb91c6}</Project>
+      <Name>entCiudad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entCliente\entCliente.csproj">
+      <Project>{621a0b1d-c397-4aba-b09b-23c6b2551697}</Project>
+      <Name>entCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entEstadoCliente\entEstadoCliente.csproj">
+      <Project>{31b2a660-631b-433b-8a32-0d8137f87757}</Project>
+      <Name>entEstadoCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entEstadoHabitacion\entEstadoHabitacion.csproj">
+      <Project>{f242e5df-6ad2-49c9-9474-dbf0da60da4d}</Project>
+      <Name>entEstadoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entHabitacion\entHabitacion.csproj">
+      <Project>{6ad1bb58-fb5b-4a12-b980-bd6319bdaa3c}</Project>
+      <Name>entHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
+      <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>
+      <Name>entTipoCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
+      <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
+      <Name>entTipoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
+      <Project>{3c4fe91d-be19-45a3-89c4-b84f0d87f55a}</Project>
+      <Name>LogicaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

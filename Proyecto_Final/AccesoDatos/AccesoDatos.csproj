@@ -45,7 +45,10 @@
     <Compile Include="DaoEntidades\datCiudad.cs" />
     <Compile Include="DaoEntidades\datCliente.cs" />
     <Compile Include="DaoEntidades\datEstadoCliente.cs" />
+    <Compile Include="DaoEntidades\datEstadoHabitacion.cs" />
+    <Compile Include="DaoEntidades\datHabitacion.cs" />
     <Compile Include="DaoEntidades\datTipoCliente.cs" />
+    <Compile Include="DaoEntidades\datTipoHabitacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,9 +67,21 @@
       <Project>{31b2a660-631b-433b-8a32-0d8137f87757}</Project>
       <Name>entEstadoCliente</Name>
     </ProjectReference>
+    <ProjectReference Include="..\entEstadoHabitacion\entEstadoHabitacion.csproj">
+      <Project>{f242e5df-6ad2-49c9-9474-dbf0da60da4d}</Project>
+      <Name>entEstadoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entHabitacion\entHabitacion.csproj">
+      <Project>{6ad1bb58-fb5b-4a12-b980-bd6319bdaa3c}</Project>
+      <Name>entHabitacion</Name>
+    </ProjectReference>
     <ProjectReference Include="..\entTipoCliente\entTipoCliente.csproj">
       <Project>{3a713ec5-33f5-4b8a-b65c-636b34d3d90e}</Project>
       <Name>entTipoCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
+      <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
+      <Name>entTipoHabitacion</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -44,5 +44,15 @@
     <Compile Include="Habitacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\entEstadoHabitacion\entEstadoHabitacion.csproj">
+      <Project>{f242e5df-6ad2-49c9-9474-dbf0da60da4d}</Project>
+      <Name>entEstadoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
+      <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
+      <Name>entTipoHabitacion</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

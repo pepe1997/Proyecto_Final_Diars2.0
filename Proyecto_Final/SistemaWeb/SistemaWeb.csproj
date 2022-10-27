@@ -115,6 +115,10 @@
     <Content Include="Views\MantenedorHabitacion\InsertarHabitacion.cshtml" />
     <Content Include="Views\MantenedorHabitacion\EditarHabitacion.cshtml" />
     <Content Include="Views\MantenedorHabitacion\CambiarEstadoHabitacion.cshtml" />
+    <Content Include="Views\MantenedorServicio\ListarServicio.cshtml" />
+    <Content Include="Views\MantenedorServicio\InsertarServicio.cshtml" />
+    <Content Include="Views\MantenedorServicio\EditarServicio.cshtml" />
+    <Content Include="Views\MantenedorServicio\EliminarServicio.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,7 +129,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\MantenedorServicio\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<entServicio.Servicio>
+
+@{
+    ViewBag.Title = "Listar Servicios";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+<h2>ListarServicio</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Servicio", "InsertarServicio")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ID Servicio
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Descripcion
+        </th>
+        <th>
+            Tipo Servicio
+        </th>
+        <th>
+            Estado Servicio
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idServicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_servicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idTipoServicio.nombreTipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idEstServicio.nombreEst)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarServicio", new { idServicio = @item.idServicio }) |
+                @Html.ActionLink("Eliminar", "EliminarServicio", new { idServicio = @item.idServicio })
+            </td>
+        </tr>
+    }
+
+</table>

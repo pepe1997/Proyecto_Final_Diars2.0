@@ -1,0 +1,73 @@
+﻿@model entServicio.Servicio
+
+@{
+    ViewBag.Title = "EliminarServicio";
+}
+
+<h2>EliminarServicio</h2>
+
+<h3>Desea Eliminar el Servicio Seleccionado?</h3>
+<div>
+    <h4>Servicio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idServicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_servicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_servicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idTipoServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idTipoServicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEstServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEstServicio)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "ListarServicio")
+        </div>
+    }
+</div>

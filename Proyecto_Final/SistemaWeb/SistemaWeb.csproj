@@ -151,6 +151,10 @@
       <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
       <Name>entTipoHabitacion</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
+      <Project>{3c4fe91d-be19-45a3-89c4-b84f0d87f55a}</Project>
+      <Name>LogicaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

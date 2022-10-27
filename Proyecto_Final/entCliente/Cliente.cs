@@ -18,8 +18,8 @@ namespace entCliente
         public string celular { get; set; }
         public string dni { get; set; }
         public DateTime fecRegCliente { get; set; }
-        public TipoCliente idTipoCliente { get; set; }
-        public EstadoCliente idEstCliente { get; set; }
-        public Ciudad idCiudad { get; set; }
+        //public TipoCliente idTipoCliente { get; set; }
+        //public EstadoCliente idEstCliente { get; set; }
+        //public Ciudad idCiudad { get; set; }
     }
 }

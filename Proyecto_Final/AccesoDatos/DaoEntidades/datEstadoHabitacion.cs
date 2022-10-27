@@ -85,7 +85,7 @@ namespace AccesoDatos.DaoEntidades
 
 
         //////////////////////////////////EditaHabitacion
-        public Boolean EditarEstadoCliente(EstadoHabitacion eh)
+        public Boolean EditarEstadoHabitacion(EstadoHabitacion eh)
         {
             SqlCommand cmd = null;
             Boolean edita = false;

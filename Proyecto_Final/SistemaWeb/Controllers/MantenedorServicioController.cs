@@ -12,6 +12,7 @@ namespace SistemaWeb.Controllers
         public ActionResult Index()
         {
             return View();
+
         }
     }
 }

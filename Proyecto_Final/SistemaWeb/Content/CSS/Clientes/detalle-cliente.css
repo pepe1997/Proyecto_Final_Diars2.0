@@ -1,0 +1,22 @@
+/*.timeline:before {
+    background: #dee6ed;
+    height: 30px;
+    left: 9px;
+    width: 2px;
+}
+
+.timeline-item:before {
+    background: #fff;
+    border: 3px solid #3f80ea;
+    border-radius: 50%;
+    height: 20px;
+    left: 0;
+    width: 20px;
+}
+
+.timeline-item:before, .timeline:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+}*/

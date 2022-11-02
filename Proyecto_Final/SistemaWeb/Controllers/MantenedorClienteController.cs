@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using entCiudad;
 using entCliente;
-using LogicaNegocio;
 using entTipoCliente;
-using entEstadoCliente;
-using entCiudad;
+using LogicaNegocio;
+using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace SistemaWeb.Controllers
 {

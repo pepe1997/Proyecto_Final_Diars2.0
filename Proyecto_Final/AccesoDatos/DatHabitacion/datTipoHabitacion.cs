@@ -1,12 +1,9 @@
-﻿using System;
+﻿using AccesoDatos.BaseDatos;
+using entTipoHabitacion;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AccesoDatos.BaseDatos;
-using entTipoHabitacion;
 
 namespace AccesoDatos.DaoEntidades
 {

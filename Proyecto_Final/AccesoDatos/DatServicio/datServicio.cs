@@ -1,12 +1,9 @@
 ﻿using AccesoDatos.BaseDatos;
+using entServicio;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using entServicio;
+using System.Data.SqlClient;
 
 namespace AccesoDatos.DatServicio
 {

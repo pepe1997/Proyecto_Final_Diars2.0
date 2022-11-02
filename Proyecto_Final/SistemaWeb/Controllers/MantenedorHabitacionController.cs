@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using entEstadoHabitacion;
-using entHabitacion;
+﻿using entHabitacion;
 using entTipoHabitacion;
 using LogicaNegocio;
+using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace SistemaWeb.Controllers
 {
@@ -15,7 +12,7 @@ namespace SistemaWeb.Controllers
         // GET: MantenedorHabitacion
         public ActionResult ListarHabitacion()
         {
-            List<Habitacion> listaHabitacion= logHabitacion.Instancia.ListarHabitacion();
+            List<Habitacion> listaHabitacion = logHabitacion.Instancia.ListarHabitacion();
             ViewBag.lista = listaHabitacion;
             return View(listaHabitacion);
         }
@@ -25,7 +22,7 @@ namespace SistemaWeb.Controllers
         {
 
             List<TipoHabitacion> listaTipoHabitacion = logTipoHabitacion.Instancia.ListarTipoHabitacion();
-            var lsTipoHabitacion = new SelectList(listaTipoHabitacion,"idTipoHabitacion","nombTipoHabitacion");
+            var lsTipoHabitacion = new SelectList(listaTipoHabitacion, "idTipoHabitacion", "nombTipoHabitacion");
             ViewBag.listaTipoHabitacion = lsTipoHabitacion;
 
             return View();

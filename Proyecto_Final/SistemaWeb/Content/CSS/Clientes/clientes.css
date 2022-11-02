@@ -1,0 +1,88 @@
+.table_center {
+    vertical-align: middle;
+}
+
+.flex-fill {
+    flex: 1 1 auto !important;
+}
+
+.stat {
+    background: #e0eafc;
+    border-radius: 50%;
+    height: 48px;
+    padding: 0.75rem;
+    width: 48px;
+}
+
+.card {
+    box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
+    margin-bottom: 24px;
+}
+
+.stat svg {
+    color: #3f80ea !important;
+    height: 24px;
+    width: 24px;
+}
+
+/* Estado Cliente */
+.badge-estado-success {
+    background-color: rgba(75, 191, 115, .175);
+    color: color-yiq(rgba(75, 191, 115, .175));
+    color: #4bbf73;
+}
+
+.badge-estado-danger {
+    background-color: rgba(217, 83, 79, .175);
+    color: color-yiq(rgba(217, 83, 79, .175));
+    color: #d9534f;
+}
+
+.badge-estado-warning {
+    background-color: rgba(217, 185, 79, 0.175);
+    color: color-yiq(rgba(217, 185, 79, 0.175));
+    color: #ffc107;
+}
+
+.badge-estado-info {
+    color: color-yiq(#39afd1);
+    background-color: rgba(57,175,209,.18);
+    color: #3f80ea;
+}
+
+/* Card */
+.card-header {
+    background: #fff;
+}
+
+/* Modal */
+.bd-example::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/* Pedidos */
+.badge-success-lighten {
+    --ct-badge-color: #0acf97 !important;
+    background-color: rgba(10, 207, 151, .18);
+    color: #2a864a;
+}
+
+.badge-warning-lighten {
+    --ct-badge-color: #ffc35a !important;
+    background-color: rgba(255, 195, 90, .18);
+    color: #c18620;
+}
+
+.badge-danger-lighten {
+    --ct-badge-color: #fa5c7c !important;
+    background-color: rgba(250, 92, 124, .18);
+    color: #c8304f;
+}
+
+.badge-info-lighten {
+    --ct-badge-color: #39afd1!important;
+    background-color: rgba(57,175,209,.18);
+    color: #3f80ea;
+}

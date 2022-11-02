@@ -1,14 +1,11 @@
-﻿using System;
+﻿using AccesoDatos.BaseDatos;
+using entEstadoHabitacion;
+using entHabitacion;
+using entTipoHabitacion;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AccesoDatos.BaseDatos;
-using entHabitacion;
-using entTipoHabitacion;
-using entEstadoHabitacion;
 
 namespace AccesoDatos.DaoEntidades
 {
@@ -52,7 +49,7 @@ namespace AccesoDatos.DaoEntidades
                     es.idEstHabitacion = Convert.ToInt32(dr["idEstHabitacion"]);
                     es.desEsTHabitacion = dr["desEsTHabitacion"].ToString();
                     hab.idEstHabitacion = es;
-                    
+
                     lista.Add(hab);
                 }
 
@@ -79,11 +76,11 @@ namespace AccesoDatos.DaoEntidades
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@numHabitacion", hab.numHabitacion);
                 cmd.Parameters.AddWithValue("@numPisoHabitacion", hab.numPisoHabitacion);
-                
+
 
                 cmd.Parameters.AddWithValue("@idTipoHabitacion", hab.idTipoHabitacion.idTipoHabitacion);
                 cmd.Parameters.AddWithValue("@idEstHabitacion", hab.idEstHabitacion.idEstHabitacion);
-               
+
 
 
                 cn.Open();
@@ -133,7 +130,7 @@ namespace AccesoDatos.DaoEntidades
             return edita;
         }
 
-   
+
         public Habitacion BuscarHabitacion(int idHabitacion)
         {
             SqlCommand cmd = null;
@@ -156,7 +153,7 @@ namespace AccesoDatos.DaoEntidades
                     c.idHabitacion = Convert.ToInt32(dr["idHabitacion"]);
                     c.numHabitacion = Convert.ToInt32(dr["numHabitacion"]);
                     c.numPisoHabitacion = Convert.ToInt32(dr["numPisoHabitacion"]);
-                  
+
 
                     tc.idTipoHabitacion = Convert.ToInt32(dr["idTipoHabitacion"]);
                     c.idTipoHabitacion = tc;

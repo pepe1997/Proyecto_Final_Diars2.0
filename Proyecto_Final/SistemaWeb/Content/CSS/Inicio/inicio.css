@@ -1,0 +1,53 @@
+.table_center {
+    vertical-align: middle;
+}
+
+.flex-fill {
+    flex: 1 1 auto!important;
+}
+
+.stat {
+    background: #e0eafc;
+    border-radius: 50%;
+    height: 48px;
+    padding: 0.75rem;
+    width: 48px;
+}
+
+.card {
+    box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
+    margin-bottom: 24px;
+}
+
+.stat svg {
+    color: #3f80ea!important;
+    height: 24px;
+    width: 24px;
+}
+
+.badge-soft-success {
+    background-color: rgba(75,191,115,.175);
+    color: color-yiq(rgba(75,191,115,.175));
+    color: #4bbf73;
+}
+
+.badge-soft-danger {
+    background-color: rgba(217,83,79,.175);
+    color: color-yiq(rgba(217,83,79,.175));
+    color: #d9534f;
+}
+/* Primera division */
+.illustration {
+    background: #e0eafc;
+    color: #3f80ea;
+}
+
+.illustration-img {
+    max-width: 150px;
+    width: 100%;
+}
+
+
+.card-header {
+    background: #fff;
+}

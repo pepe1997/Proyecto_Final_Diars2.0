@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AccesoDatos.DaoEntidades;
 using entEstadoHabitacion;
-using AccesoDatos.DaoEntidades;
+using System;
+using System.Collections.Generic;
 namespace LogicaNegocio
 {
     public class logEstadoHabitacion

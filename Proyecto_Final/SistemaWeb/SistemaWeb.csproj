@@ -88,6 +88,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CSS\Clientes\agregar-cliente.css" />
+    <Content Include="Content\CSS\Clientes\clientes.css" />
+    <Content Include="Content\CSS\Clientes\detalle-cliente.css" />
+    <Content Include="Content\CSS\Inicio\inicio.css" />
+    <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\Imagenes\camarena.png" />
+    <Content Include="Content\Imagenes\cod.png" />
+    <Content Include="Content\Imagenes\customer-support.png" />
+    <Content Include="Content\Imagenes\discover.png" />
+    <Content Include="Content\Imagenes\Logo.jpeg" />
+    <Content Include="Content\Imagenes\master.png" />
+    <Content Include="Content\Imagenes\payoneer.png" />
+    <Content Include="Content\Imagenes\paypal.png" />
+    <Content Include="Content\Imagenes\Productos\Abarrote1.jpg" />
+    <Content Include="Content\Imagenes\Productos\Abarrote2.jpg" />
+    <Content Include="Content\Imagenes\Productos\Abarrote3.jpg" />
+    <Content Include="Content\Imagenes\Productos\Abarrote4.png" />
+    <Content Include="Content\Imagenes\Productos\Abarrote5.jpg" />
+    <Content Include="Content\Imagenes\Productos\Abarrote6.jpg" />
+    <Content Include="Content\Imagenes\Productos\Bebidas1.jpg" />
+    <Content Include="Content\Imagenes\Productos\CuidadoPer1.jpg" />
+    <Content Include="Content\Imagenes\Productos\DulSnaks1.jpg" />
+    <Content Include="Content\Imagenes\Productos\HelaAlimCongel1.jpg" />
+    <Content Include="Content\Imagenes\Productos\HigieneLim1.jpg" />
+    <Content Include="Content\Imagenes\Productos\SerLicSig1.jpg" />
+    <Content Include="Content\Imagenes\stripe.png" />
+    <Content Include="Content\Imagenes\Usuario1.png" />
+    <Content Include="Content\Imagenes\Usuario2.png" />
+    <Content Include="Content\Imagenes\Usuario3.png" />
+    <Content Include="Content\Imagenes\Usuario4.png" />
+    <Content Include="Content\Imagenes\Usuario5.png" />
+    <Content Include="Content\Imagenes\Usuario6.png" />
+    <Content Include="Content\Imagenes\visa.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -119,6 +152,7 @@
     <Content Include="Views\MantenedorServicio\InsertarServicio.cshtml" />
     <Content Include="Views\MantenedorServicio\EditarServicio.cshtml" />
     <Content Include="Views\MantenedorServicio\EliminarServicio.cshtml" />
+    <Content Include="Views\Shared\VistaMaestra.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -128,6 +162,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\CSS\Compras\" />
+    <Folder Include="Content\CSS\Personal\" />
+    <Folder Include="Content\CSS\Productos\" />
+    <Folder Include="Content\CSS\Proveedores\" />
+    <Folder Include="Content\CSS\Ventas\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

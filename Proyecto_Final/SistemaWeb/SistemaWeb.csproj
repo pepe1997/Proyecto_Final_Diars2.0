@@ -121,7 +121,10 @@
     <Content Include="Content\Imagenes\Usuario5.png" />
     <Content Include="Content\Imagenes\Usuario6.png" />
     <Content Include="Content\Imagenes\visa.png" />
+    <Content Include="Content\sidebars.css" />
+    <Content Include="Content\sidebars.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>

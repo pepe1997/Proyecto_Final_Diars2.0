@@ -5,6 +5,7 @@ using LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using entEstadoCliente;
 
 namespace SistemaWeb.Controllers
 {
@@ -26,6 +27,10 @@ namespace SistemaWeb.Controllers
             var lsTipoCliente = new SelectList(listaTipoCliente, "idTipCliente", "desTipCliente");
             ViewBag.listaTipoCliente = lsTipoCliente;
 
+            List<EstadoCliente> listaEstadoCliente = logEstadoCliente.Instancia.ListarEstCliente();
+            var lsEstCliente = new SelectList(listaTipoCliente, "idEstCliente", "desEsTCliente");
+            ViewBag.listaEstadoCliente = lsEstCliente;
+
             List<Ciudad> listaCiudad = logCiudad.Instancia.ListarCiudad();
             var lsCiudad = new SelectList(listaCiudad, "idCiudad", "desCiudad");
             ViewBag.listaCiudad = lsCiudad;
@@ -41,6 +46,9 @@ namespace SistemaWeb.Controllers
 
                 Cli.idTipoCliente = new TipoCliente();
                 Cli.idTipoCliente.idTipCliente = Convert.ToInt32(frm["cboTipoCliente"]);
+
+                Cli.idEstCliente = new EstadoCliente();
+                Cli.idEstCliente.idEstCliente = Convert.ToInt32(frm["cboEstCliente"]);
 
                 Cli.idCiudad = new Ciudad();
                 Cli.idCiudad.idCiudad = Convert.ToInt32(frm["cboCiudad"]);
@@ -72,6 +80,11 @@ namespace SistemaWeb.Controllers
             List<Ciudad> listaCiudad = logCiudad.Instancia.ListarCiudad();
             var lsCiudad = new SelectList(listaCiudad, "idCiudad", "desCiudad", Cli.idCiudad.idCiudad);
             ViewBag.listaCiudad = lsCiudad;
+
+            List<EstadoCliente> listaEstado = logEstadoCliente.Instancia.ListarEstCliente();
+            var lsEstado = new SelectList(listaEstado, "idEstCliente", "desEsTCliente", Cli.idEstCliente.idEstCliente);
+            ViewBag.listaEstado = lsEstado;
+
             List<TipoCliente> listaTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();
             var lsTipoCliente = new SelectList(listaTipoCliente, "idTipCliente",
            "desTipCliente", Cli.idTipoCliente.idTipCliente);
@@ -84,6 +97,9 @@ namespace SistemaWeb.Controllers
         {
             Cli.idCiudad = new Ciudad();
             Cli.idCiudad.idCiudad = Convert.ToInt32(frm["cboCiudad"]);
+
+            Cli.idEstCliente = new EstadoCliente();
+            Cli.idEstCliente.idEstCliente = Convert.ToInt32(frm["cboEstCliente"]);
 
             Cli.idTipoCliente = new TipoCliente();
             Cli.idTipoCliente.idTipCliente = Convert.ToInt32(frm["cboTipoCliente"]);

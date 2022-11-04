@@ -7,24 +7,24 @@
 <h2>Listar Habitacion</h2>
 
 <p>
-    @Html.ActionLink("Nuevo", "InsertarHabitan")
+    @Html.ActionLink("Nuevo", "InsertarHabitacion")
 </p>
 <table border="1px" cellspacing="0px" cellpadding="10px" class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.idHabitacion)
+            Id
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.numHabitacion)
+            Num Habitacion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.numPisoHabitacion)
+            Num Piso
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.idTipoHabitacion)
+            Tipo Habitacion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.idEstHabitacion)
+            Estado Habitacion
         </th>
         <th></th>
     </tr>
@@ -41,15 +41,15 @@
             @Html.DisplayFor(modelItem => item.numPisoHabitacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.idTipoHabitacion)
+            @Html.DisplayFor(modelItem => item.idTipoHabitacion.idTipoHabitacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.idEstHabitacion)
+            @Html.DisplayFor(modelItem => item.idEstHabitacion.idEstHabitacion)
         </td>
         <td>
-            @Html.ActionLink("Editar", "EditarCliente", new { idHabitacion = @item.idHabitacion}) |
+            @Html.ActionLink("Editar", "EditarHabitacion", new { idHabitacion = @item.idHabitacion}) |
           
-            @Html.ActionLink("Eliminar", "EliminarCliente", new { idHabitacion = @item.idHabitacion })
+            @Html.ActionLink("Eliminar", "EliminarHabitacion", new { idHabitacion = @item.idHabitacion })
         </td>
     </tr>
 }

@@ -12,8 +12,10 @@ namespace SistemaWeb
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "MantenedorCliente", action = "ListarCliente", id = UrlParameter.Optional }
-            );
+                ///defaults: new { controller = "MantenedorCliente", action = "ListarCliente", id = UrlParameter.Optional }|
+                defaults: new { controller = "MantenedorHabitacion", action = "ListarHabitacion", id = UrlParameter.Optional }
+                ///defaults: new { controller = "MantenedorServicio", action = "ListarServicio", id = UrlParameter.Optional }
+            ) ;
         }
     }
 }

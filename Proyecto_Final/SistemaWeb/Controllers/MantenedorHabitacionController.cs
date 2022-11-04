@@ -4,6 +4,7 @@ using LogicaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using entEstadoHabitacion;
 
 namespace SistemaWeb.Controllers
 {
@@ -25,6 +26,10 @@ namespace SistemaWeb.Controllers
             var lsTipoHabitacion = new SelectList(listaTipoHabitacion, "idTipoHabitacion", "nombTipoHabitacion");
             ViewBag.listaTipoHabitacion = lsTipoHabitacion;
 
+            List<EstadoHabitacion> listaEstadoHabitacion = logEstadoHabitacion.Instancia.ListarEstHabitacion();
+            var lsEstadoHabitacion = new SelectList(listaEstadoHabitacion, "idEstHabitacion", "desEsTHabitacion");
+            ViewBag.listaEstadoHabitacion = lsEstadoHabitacion;
+
             return View();
         }
         [HttpPost]
@@ -35,6 +40,9 @@ namespace SistemaWeb.Controllers
 
                 Cli.idTipoHabitacion = new TipoHabitacion();
                 Cli.idTipoHabitacion.idTipoHabitacion = Convert.ToInt32(frm["cboTipoHabitacion"]);
+
+                Cli.idEstHabitacion = new EstadoHabitacion();
+                Cli.idEstHabitacion.idEstHabitacion = Convert.ToInt32(frm["cboEstadoHabitacion"]);
 
                 Boolean inserta = logHabitacion.Instancia.InsertarHabitacion(Cli);
                 if (inserta)
@@ -61,8 +69,12 @@ namespace SistemaWeb.Controllers
             Cli = logHabitacion.Instancia.BuscarHabitacion(idHabitacion);
 
             List<TipoHabitacion> listaTipoHabitacion = logTipoHabitacion.Instancia.ListarTipoHabitacion();
-            var lsTipoHabitacion = new SelectList(listaTipoHabitacion, "idTipCliente", "nombTipoHabitacion", Cli.idTipoHabitacion.idTipoHabitacion);
+            var lsTipoHabitacion = new SelectList(listaTipoHabitacion, "idTipoHabitacion", "nombTipoHabitacion", Cli.idTipoHabitacion.idTipoHabitacion);
             ViewBag.listaTipoHabitacion = lsTipoHabitacion;
+
+            List<EstadoHabitacion> listaEstadoHabitacion = logEstadoHabitacion.Instancia.ListarEstHabitacion();
+            var lsEstadoHabitacion = new SelectList(listaEstadoHabitacion, "idEstHabitacion", "desEsTHabitacion");
+            ViewBag.listaEstadoHabitacion = lsEstadoHabitacion;
 
             return View(Cli);
         }
@@ -73,6 +85,9 @@ namespace SistemaWeb.Controllers
 
             Cli.idTipoHabitacion = new TipoHabitacion();
             Cli.idTipoHabitacion.idTipoHabitacion = Convert.ToInt32(frm["cboTipoHabitacion"]);
+
+            Cli.idEstHabitacion = new EstadoHabitacion();
+            Cli.idEstHabitacion.idEstHabitacion = Convert.ToInt32(frm["cboEstadoHabitacion"]);
 
             try
             {

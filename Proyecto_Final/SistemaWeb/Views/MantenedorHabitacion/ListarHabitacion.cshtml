@@ -4,12 +4,12 @@
     ViewBag.Title = "ListarHabitacion";
 }
 
-<h2>ListarHabitacion</h2>
+<h2>Listar Habitacion</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo", "InsertarHabitan")
 </p>
-<table class="table">
+<table border="1px" cellspacing="0px" cellpadding="10px" class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.idHabitacion)
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.idEstHabitacion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Editar", "EditarCliente", new { idHabitacion = @item.idHabitacion}) |
+          
+            @Html.ActionLink("Eliminar", "EliminarCliente", new { idHabitacion = @item.idHabitacion })
         </td>
     </tr>
 }

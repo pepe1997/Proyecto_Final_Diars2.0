@@ -37,7 +37,7 @@ namespace AccesoDatos.DaoEntidades
                     EstadoCliente tc = new EstadoCliente();
 
                     tc.idEstCliente = Convert.ToInt32(dr["idEstCliente"]);
-                    tc.desEstCliente = dr["desEstCliente"].ToString();
+                    tc.desEstCliente = dr["desEsTCliente"].ToString();
                     lista.Add(tc);
                 }
 
@@ -62,7 +62,7 @@ namespace AccesoDatos.DaoEntidades
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarEstCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@desEstCliente", Cli.desEstCliente);
+                cmd.Parameters.AddWithValue("@desEsTCliente", Cli.desEstCliente);
 
 
 
@@ -93,7 +93,7 @@ namespace AccesoDatos.DaoEntidades
                 cmd = new SqlCommand("spEditaEstadoCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idEstCliente", Cli.idEstCliente);
-                cmd.Parameters.AddWithValue("@desEstCliente", Cli.desEstCliente);
+                cmd.Parameters.AddWithValue("@desEsTCliente", Cli.desEstCliente);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -128,7 +128,7 @@ namespace AccesoDatos.DaoEntidades
                 {
 
                     c.idEstCliente = Convert.ToInt32(dr["idEstCliente"]);
-                    c.desEstCliente = dr["desEstCliente"].ToString();
+                    c.desEstCliente = dr["desEsTCliente"].ToString();
 
                 }
             }

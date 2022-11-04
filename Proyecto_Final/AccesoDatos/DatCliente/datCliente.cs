@@ -58,7 +58,7 @@ namespace AccesoDatos.DaoEntidades
                     ec.idEstCliente = Convert.ToInt32(dr["idEstCliente"]);
                     ec.desEstCliente = dr["desEstCliente"].ToString();
                     Cli.idEstCliente = ec;
-                    //ci.idCiudad = Convert.ToInt32(dr["idCiudad"]);
+                    ci.idCiudad = Convert.ToInt32(dr["idCiudad"]);
                     ci.desCiudad = dr["desCiudad"].ToString();
                     Cli.idCiudad = ci;
                     lista.Add(Cli);

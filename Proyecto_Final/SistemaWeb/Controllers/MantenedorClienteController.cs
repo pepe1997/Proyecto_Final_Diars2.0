@@ -28,7 +28,7 @@ namespace SistemaWeb.Controllers
             ViewBag.listaTipoCliente = lsTipoCliente;
 
             List<EstadoCliente> listaEstadoCliente = logEstadoCliente.Instancia.ListarEstCliente();
-            var lsEstCliente = new SelectList(listaTipoCliente, "idEstCliente", "desEsTCliente");
+            var lsEstCliente = new SelectList(listaEstadoCliente, "idEstCliente", "desEstCliente");
             ViewBag.listaEstadoCliente = lsEstCliente;
 
             List<Ciudad> listaCiudad = logCiudad.Instancia.ListarCiudad();
@@ -67,6 +67,7 @@ namespace SistemaWeb.Controllers
             catch (ApplicationException ex)
             {
                 return RedirectToAction("InsertarCliente", new { mesjExceptio = ex.Message });
+                
             }
         }
 
@@ -82,7 +83,7 @@ namespace SistemaWeb.Controllers
             ViewBag.listaCiudad = lsCiudad;
 
             List<EstadoCliente> listaEstado = logEstadoCliente.Instancia.ListarEstCliente();
-            var lsEstado = new SelectList(listaEstado, "idEstCliente", "desEsTCliente", Cli.idEstCliente.idEstCliente);
+            var lsEstado = new SelectList(listaEstado, "idEstCliente", "desEstCliente", Cli.idEstCliente.idEstCliente);
             ViewBag.listaEstado = lsEstado;
 
             List<TipoCliente> listaTipoCliente = logTipoCliente.Instancia.ListarTipoCliente();

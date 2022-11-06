@@ -1,12 +1,15 @@
 ﻿
 
 <!DOCTYPE html>
-<html lang="en">
+<html >
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
     <!-- Bootstrap -> CSS only y JavaScript Bundle with Popper -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -23,8 +26,6 @@
     <link rel="stylesheet" href="~/Content/CSS/Clientes/agregar-cliente.css">
     <!-- Custom styles for this template -->
     <link href="~/Content/sidebars.css" rel="stylesheet">
-    
-    <title>AppAdmin MC | Agregar Cliente</title>
 </head>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -182,10 +183,8 @@
                                 
                                 <div class="card-body pt-0">
                                     <!-- Formulario Cliente -->
-                                    <!-- Vald01 -->
-                                    <form class="row g-3">
-                                        @RenderBody()
-                                    </form>
+                                    <!-- Vald01 -->  
+                                            @RenderBody()
                                 </div> <!-- end card-body-->
                             </div> <!-- end card-->
                         </div>

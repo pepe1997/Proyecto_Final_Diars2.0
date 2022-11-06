@@ -153,7 +153,7 @@
     <Content Include="Views\MantenedorServicio\InsertarServicio.cshtml" />
     <Content Include="Views\MantenedorServicio\EditarServicio.cshtml" />
     <Content Include="Views\MantenedorServicio\EliminarServicio.cshtml" />
-    <Content Include="Views\Shared\VistaMaestra.cshtml" />
+    <Content Include="Views\Shared\_VistaMaestra.cshtml" />
     <Content Include="Views\MantenedorCliente\InsertarCliente.cshtml" />
     <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
     <None Include="Web.Debug.config">

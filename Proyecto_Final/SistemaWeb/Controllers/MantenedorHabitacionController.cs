@@ -117,7 +117,7 @@ namespace SistemaWeb.Controllers
             return View(Cli);
         }
         [HttpPost]
-        public ActionResult EliminarHabitacion(Habitacion Cli)
+        public ActionResult CambiarEstadoHabitacion(Habitacion Cli)
         {
 
             try
@@ -135,7 +135,7 @@ namespace SistemaWeb.Controllers
 
             catch (ApplicationException ex)
             {
-                return RedirectToAction("EliminarHabitacion", new { mesjExceptio = ex.Message });
+                return RedirectToAction("CambiarEstadoHabitacion", new { mesjExceptio = ex.Message });
             }
 
         }

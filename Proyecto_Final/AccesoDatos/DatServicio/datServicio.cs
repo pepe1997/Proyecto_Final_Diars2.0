@@ -45,7 +45,6 @@ namespace AccesoDatos.DatServicio
                     ts.idTipoServicio = Convert.ToInt32(dr["idTipoServicio"]);
                     ts.nombreTipo = dr["nombreTipo"].ToString();
                     Ser.idTipoServicio = ts;
-                    es.idEstServicio = Convert.ToInt32(dr["idEstServicio"]);
                     es.nombreEst = dr["nombreEst"].ToString();
                     Ser.idEstServicio = es;
                     //Ser.idTipoServicio = Convert.ToInt32(dr["idTipoServicio"]);

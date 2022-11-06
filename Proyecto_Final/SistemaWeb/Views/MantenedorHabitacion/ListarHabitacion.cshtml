@@ -41,10 +41,10 @@
             @Html.DisplayFor(modelItem => item.numPisoHabitacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.idTipoHabitacion.idTipoHabitacion)
+            @Html.DisplayFor(modelItem => item.idTipoHabitacion.nombTipoHabitacion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.idEstHabitacion.idEstHabitacion)
+            @Html.DisplayFor(modelItem => item.idEstHabitacion.desEsTHabitacion)
         </td>
         <td>
             @Html.ActionLink("Editar", "EditarHabitacion", new { idHabitacion = @item.idHabitacion}) |

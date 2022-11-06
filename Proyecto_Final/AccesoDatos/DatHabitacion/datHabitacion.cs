@@ -46,6 +46,7 @@ namespace AccesoDatos.DaoEntidades
 
                     ti.nombTipoHabitacion = dr["nombTipoHabitacion"].ToString();
                     hab.idTipoHabitacion = ti;
+                    
                     es.idEstHabitacion = Convert.ToInt32(dr["idEstHabitacion"]);
                     es.desEsTHabitacion = dr["desEsTHabitacion"].ToString();
                     hab.idEstHabitacion = es;
@@ -76,8 +77,6 @@ namespace AccesoDatos.DaoEntidades
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@numHabitacion", hab.numHabitacion);
                 cmd.Parameters.AddWithValue("@numPisoHabitacion", hab.numPisoHabitacion);
-
-
                 cmd.Parameters.AddWithValue("@idTipoHabitacion", hab.idTipoHabitacion.idTipoHabitacion);
                 cmd.Parameters.AddWithValue("@idEstHabitacion", hab.idEstHabitacion.idEstHabitacion);
 
@@ -113,7 +112,7 @@ namespace AccesoDatos.DaoEntidades
                 cmd.Parameters.AddWithValue("@numHabitacion", hab.numHabitacion);
                 cmd.Parameters.AddWithValue("@numPisoHabitacion", hab.numPisoHabitacion);
                 cmd.Parameters.AddWithValue("@idTipoHabitacion", hab.idTipoHabitacion.idTipoHabitacion);
-                cmd.Parameters.AddWithValue("@idEstCliente", hab.idEstHabitacion.idEstHabitacion);
+                cmd.Parameters.AddWithValue("@idEstHabitacion", hab.idEstHabitacion.idEstHabitacion);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();

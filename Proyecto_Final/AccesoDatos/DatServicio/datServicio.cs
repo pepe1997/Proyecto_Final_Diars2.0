@@ -45,6 +45,7 @@ namespace AccesoDatos.DatServicio
                     ts.idTipoServicio = Convert.ToInt32(dr["idTipoServicio"]);
                     ts.nombreTipo = dr["nombreTipo"].ToString();
                     Ser.idTipoServicio = ts;
+                    es.idEstServicio = Convert.ToInt32(dr["idEstServicio"]);
                     es.nombreEst = dr["nombreEst"].ToString();
                     Ser.idEstServicio = es;
                     //Ser.idTipoServicio = Convert.ToInt32(dr["idTipoServicio"]);
@@ -176,7 +177,7 @@ namespace AccesoDatos.DatServicio
                 cmd = new SqlCommand("spEliminarServicio", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idServicio", Ser.idServicio);
-                cmd.Parameters.AddWithValue("@idEstServicio", Ser.idEstServicio);
+                
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i >= 0)

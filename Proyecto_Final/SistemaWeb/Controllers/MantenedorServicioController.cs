@@ -11,9 +11,9 @@ namespace SistemaWeb.Controllers
         // GET: MantenedorServicio
         public ActionResult ListarServicio()
         {
-            List<Servicio> lista = logServicio.Instancia.ListarServicio();
-            ViewBag.lista = lista;
-            return View(lista);
+            List<Servicio> listaServicio = logServicio.Instancia.ListarServicio();
+            ViewBag.lista = listaServicio;
+            return View(listaServicio);
         }
 
         [HttpGet]

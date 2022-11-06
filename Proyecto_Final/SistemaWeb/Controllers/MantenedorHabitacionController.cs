@@ -73,7 +73,7 @@ namespace SistemaWeb.Controllers
             ViewBag.listaTipoHabitacion = lsTipoHabitacion;
 
             List<EstadoHabitacion> listaEstadoHabitacion = logEstadoHabitacion.Instancia.ListarEstHabitacion();
-            var lsEstadoHabitacion = new SelectList(listaEstadoHabitacion, "idEstHabitacion", "desEsTHabitacion");
+            var lsEstadoHabitacion = new SelectList(listaEstadoHabitacion, "idEstHabitacion", "desEsTHabitacion", Cli.idEstHabitacion.idEstHabitacion);
             ViewBag.listaEstadoHabitacion = lsEstadoHabitacion;
 
             return View(Cli);

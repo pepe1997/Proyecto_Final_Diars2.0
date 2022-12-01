@@ -51,6 +51,7 @@
     <Compile Include="logTipoCliente.cs" />
     <Compile Include="logTipoHabitacion.cs" />
     <Compile Include="logTipoServicio.cs" />
+    <Compile Include="logUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +94,10 @@
     <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
       <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
       <Name>entTipoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entUsuario\entUsuario.csproj">
+      <Project>{3380331a-c11b-430d-b036-5fde137d7688}</Project>
+      <Name>entUsuario</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

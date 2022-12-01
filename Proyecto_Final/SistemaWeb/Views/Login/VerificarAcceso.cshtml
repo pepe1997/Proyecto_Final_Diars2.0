@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "VerificarAcceso";
+    Layout = null;
+}
+
+<h2>VerificarAcceso</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Intranet - Verificar Acceso</title>
+    <link href="~/Content/loginEstilos.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div align="center">
+        <form method="post">
+            <div class="body"></div>
+            <div class="grad"></div>
+            <div class="header">
+                <div>Hotel<span>Central</span></div>
+            </div>
+            <br>
+            <div class="login">
+                <table border="1">
+                    <tr>
+                        <td>Usuario:</td>
+                        <td><input type="text" name="txtUsuario" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="text" name="txtPassword" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Ingresar" />
+                            <input type="reset" value="Limpiar" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p style="color: red">@ViewBag.mensaje</p>
+        </form>
+    </div>
+</body>
+</html>

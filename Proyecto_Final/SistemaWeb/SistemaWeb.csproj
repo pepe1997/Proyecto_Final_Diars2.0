@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +56,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -93,10 +97,12 @@
     <Content Include="Content\CSS\Clientes\detalle-cliente.css" />
     <Content Include="Content\CSS\Inicio\inicio.css" />
     <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\HomeEstilos.css" />
     <Content Include="Content\Imagenes\camarena.png" />
     <Content Include="Content\Imagenes\cod.png" />
     <Content Include="Content\Imagenes\customer-support.png" />
     <Content Include="Content\Imagenes\discover.png" />
+    <Content Include="Content\Imagenes\Fondos\FondoHome.jpg" />
     <Content Include="Content\Imagenes\Logo.jpeg" />
     <Content Include="Content\Imagenes\master.png" />
     <Content Include="Content\Imagenes\payoneer.png" />
@@ -121,6 +127,7 @@
     <Content Include="Content\Imagenes\Usuario5.png" />
     <Content Include="Content\Imagenes\Usuario6.png" />
     <Content Include="Content\Imagenes\visa.png" />
+    <Content Include="Content\loginEstilos.css" />
     <Content Include="Content\sidebars.css" />
     <Content Include="Content\sidebars.js" />
     <Content Include="Content\Site.css" />
@@ -129,7 +136,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MantenedorClienteController.cs" />
     <Compile Include="Controllers\MantenedorHabitacionController.cs" />
     <Compile Include="Controllers\MantenedorServicioController.cs" />
@@ -156,6 +166,8 @@
     <Content Include="Views\Shared\_VistaMaestra.cshtml" />
     <Content Include="Views\MantenedorCliente\InsertarCliente.cshtml" />
     <Content Include="Views\MantenedorCliente\EditarCliente.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\VerificarAcceso.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -208,6 +220,10 @@
     <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
       <Project>{96515416-1a47-44eb-adae-f51e5c01dc6a}</Project>
       <Name>entTipoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entUsuario\entUsuario.csproj">
+      <Project>{3380331a-c11b-430d-b036-5fde137d7688}</Project>
+      <Name>entUsuario</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
       <Project>{3c4fe91d-be19-45a3-89c4-b84f0d87f55a}</Project>

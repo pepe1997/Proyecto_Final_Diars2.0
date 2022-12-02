@@ -11,7 +11,7 @@ namespace SistemaWeb.Controllers
         // GET: Reserva
         public ActionResult Index()
         {
-            return View();
+        } } }} return View();
         }
     }
 }

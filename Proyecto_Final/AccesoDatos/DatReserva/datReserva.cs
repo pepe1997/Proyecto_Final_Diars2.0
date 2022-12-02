@@ -41,30 +41,24 @@ namespace AccesoDatos.DatReserva
                 while (dr.Read())
                 {
                     Reserva re = new Reserva();
-                    Ciudad ci = new Ciudad();
-                    TipoCliente tc = new TipoCliente();
-                    EstadoCliente ec = new EstadoCliente();
+                    Habitacion ha = new Habitacion();
+                    Cliente cl = new Cliente();
+                    EstadoReserva er = new EstadoReserva();
 
-                    Cli.idCliente = Convert.ToInt32(dr["idCliente"]);
-                    Cli.nombCliente = dr["nombCliente"].ToString();
-                    Cli.apelCliente = dr["apelCliente"].ToString();
-                    Cli.direcCliente = dr["direcCliente"].ToString();
-                    Cli.celular = dr["celular"].ToString();
-                    Cli.dni = dr["dni"].ToString();
-                    Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
-                    /*Cli.idTipoCliente = Convert.ToInt32(dr["idTipoCliente"]);
-                    Cli.idEstCliente = Convert.ToInt32(dr["idEstCliente"]);
-                    Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);*/
+                    re.idRserva = Convert.ToInt32(dr["idRserva"]);
+                    re.fecIngReseva = dr["fecIngReseva"].ToString();
+                    re.numPerReserva = Convert.ToInt32(dr["numPerReserva"].ToString());
+                    re.fecSalReserva = dr["fecSalReserva"].ToString();
 
-                    tc.desTipCliente = dr["desTipCliente"].ToString();
-                    Cli.idTipoCliente = tc;
-                    ec.idEstCliente = Convert.ToInt32(dr["idEstCliente"]);
-                    ec.desEstCliente = dr["desEsTCliente"].ToString();
-                    Cli.idEstCliente = ec;
-                    ci.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    ci.desCiudad = dr["desCiudad"].ToString();
-                    Cli.idCiudad = ci;
-                    lista.Add(Cli);
+                    ha.numHabitacion = Convert.ToInt32(dr["numHabitacion"].ToString());
+                    re.idHabitacion = ha;
+                    cl.idCliente = Convert.ToInt32(dr["idCliente"]);
+                    cl.nombCliente = dr["nombCliente"].ToString();
+                    re.idCliente = cl;
+                    er.idEstRserva = Convert.ToInt32(dr["idEstRserva"]);
+                    er.desEsTReserva = dr["desEsTReserva"].ToString();
+                    re.idEstRserva= er;
+                    lista.Add(re);
                 }
 
             }
@@ -79,28 +73,22 @@ namespace AccesoDatos.DatReserva
             return lista;
         }
         /////////////////////////InsertaCliente
-        public Boolean InsertarCliente(Cliente Cli)
+        public Boolean InsertarReserva(Reserva re)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCliente", cn);
+                cmd = new SqlCommand("spInsertarReserva", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombCliente", Cli.nombCliente);
-                cmd.Parameters.AddWithValue("@apelCliente", Cli.apelCliente);
-                cmd.Parameters.AddWithValue("@direcCliente", Cli.direcCliente);
-                cmd.Parameters.AddWithValue("@celular", Cli.celular);
-                cmd.Parameters.AddWithValue("@dni", Cli.dni);
-                cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
-                /*cmd.Parameters.AddWithValue("@idTipoCliente", Cli.idTipoCliente);
-                cmd.Parameters.AddWithValue("@idEstCliente", Cli.idEstCliente);
-                cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);*/
+                cmd.Parameters.AddWithValue("@fecIngReseva", re.fecIngReseva);
+                cmd.Parameters.AddWithValue("@numPerReserva", re.numPerReserva);
+                cmd.Parameters.AddWithValue("@direcCliente", re.fecSalReserva);
 
-                cmd.Parameters.AddWithValue("@idTipCliente", Cli.idTipoCliente.idTipCliente);
-                cmd.Parameters.AddWithValue("@idEstCliente", Cli.idEstCliente.idEstCliente);
-                cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad.idCiudad);
+                cmd.Parameters.AddWithValue("@idEstRserva", re.idEstRserva.idEstRserva);
+                cmd.Parameters.AddWithValue("@idCliente", re.idCliente.idCliente);
+                cmd.Parameters.AddWithValue("@idHabitacion", re.idHabitacion.idHabitacion);
 
 
                 cn.Open();
@@ -120,30 +108,23 @@ namespace AccesoDatos.DatReserva
 
 
         //////////////////////////////////EditaCliente
-        public Boolean EditarCliente(Cliente Cli)
+        public Boolean EditarReserva(Reserva re)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditaCliente", cn);
+                cmd = new SqlCommand("spEditaReserva", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCliente", Cli.idCliente);
-                cmd.Parameters.AddWithValue("@nombCliente", Cli.nombCliente);
-                cmd.Parameters.AddWithValue("@apelCliente", Cli.apelCliente);
-                cmd.Parameters.AddWithValue("@direcCliente", Cli.direcCliente);
-                cmd.Parameters.AddWithValue("@celular", Cli.celular);
-                cmd.Parameters.AddWithValue("@dni", Cli.dni);
-                cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
-                /*cmd.Parameters.AddWithValue("@idTipoCliente", Cli.idTipoCliente);
-                cmd.Parameters.AddWithValue("@idEstCliente", Cli.idEstCliente);
-                cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);*/
+                cmd.Parameters.AddWithValue("@idRserva", re.idRserva);
+                cmd.Parameters.AddWithValue("@fecIngReseva", re.fecIngReseva);
+                cmd.Parameters.AddWithValue("@numPerReserva", re.numPerReserva);
+                cmd.Parameters.AddWithValue("@direcCliente", re.fecSalReserva);
 
-
-                cmd.Parameters.AddWithValue("@idTipCliente", Cli.idTipoCliente.idTipCliente);
-                cmd.Parameters.AddWithValue("@idEstCliente", Cli.idEstCliente.idEstCliente);
-                cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad.idCiudad);
+                cmd.Parameters.AddWithValue("@idEstRserva", re.idEstRserva.idEstRserva);
+                cmd.Parameters.AddWithValue("@idCliente", re.idCliente.idCliente);
+                cmd.Parameters.AddWithValue("@idHabitacion", re.idHabitacion.idHabitacion);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -160,70 +141,39 @@ namespace AccesoDatos.DatReserva
             return edita;
         }
 
-        //deshabilitaCliente
-
-        /*public Boolean DeshabilitarCliente(entCliente.Cliente Cli)
+       
+        public Reserva BuscarReserva(int idReserva)
         {
             SqlCommand cmd = null;
-            Boolean delete = false;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarCliente", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCliente", Cli.idCliente);
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    delete = true;
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return delete;
-        }*/
-        public Cliente BuscarCliente(int idCliente)
-        {
-            SqlCommand cmd = null;
-            Cliente c = new Cliente();
+            Reserva re = new Reserva();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spBuscarCliente", cn);
+                cmd = new SqlCommand("spBuscarReserva", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@idCliente", idCliente);
+                cmd.Parameters.AddWithValue("@idRserva", idReserva);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
 
-                    Ciudad ci = new Ciudad();
-                    TipoCliente tc = new TipoCliente();
-                    EstadoCliente ec = new EstadoCliente();
+                    Habitacion ha = new Habitacion();
+                    Cliente cl = new Cliente();
+                    EstadoReserva er = new EstadoReserva();
 
-                    c.idCliente = Convert.ToInt32(dr["idCliente"]);
-                    c.nombCliente = dr["nombCliente"].ToString();
-                    c.apelCliente = dr["apelCliente"].ToString();
-                    c.direcCliente = dr["direcCliente"].ToString();
-                    c.celular = dr["celular"].ToString();
-                    c.dni = dr["dni"].ToString();
-                    c.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
-                    /*c.idTipoCliente = Convert.ToInt32(dr["idTipoCliente"]);
-                    c.idEstCliente = Convert.ToInt32(dr["idEstCliente"]);
-                    c.idCiudad = Convert.ToInt32(dr["idCiudad"]);*/
+                    re.idRserva = Convert.ToInt32(dr["idRserva"]);
+                    re.fecIngReseva = dr["fecIngReseva"].ToString();
+                    re.numPerReserva = Convert.ToInt32(dr["numPerReserva"].ToString());
+                    re.fecSalReserva = dr["fecSalReserva"].ToString();
 
-                    tc.idTipCliente = Convert.ToInt32(dr["idTipCliente"]);
-                    c.idTipoCliente = tc;
-                    ec.idEstCliente = Convert.ToInt32(dr["idEstCliente"]);
-                    c.idEstCliente = ec;
+                    ha.idHabitacion = Convert.ToInt32(dr["idHabitacion"]);
+                    re.idHabitacion = ha;
+                    cl.idCliente = Convert.ToInt32(dr["idCliente"]);
+                    re.idCliente = cl;
 
-                    ci.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    c.idCiudad = ci;
+                    er.idEstRserva = Convert.ToInt32(dr["idEstRserva"]);
+                    re.idEstRserva = er;
                 }
             }
             catch (Exception e)
@@ -234,19 +184,19 @@ namespace AccesoDatos.DatReserva
             {
                 cmd.Connection.Close();
             }
-            return c;
+            return re;
         }
 
-        public Boolean EliminarCliente(Cliente c)
+        public Boolean EliminarReserva(Reserva c)
         {
             SqlCommand cmd = null;
             Boolean elimina = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEliminarCliente", cn);
+                cmd = new SqlCommand("spEliminarReserva", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCliente", c.idCliente);
+                cmd.Parameters.AddWithValue("@idRserva", c.idRserva);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();

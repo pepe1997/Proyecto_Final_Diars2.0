@@ -16,7 +16,7 @@ namespace entReserva
         public int numPerReserva { get; set; }
         public string fecSalReserva { get; set; }
         public EstadoReserva idEstRserva { get; set; }
-        public Cliente Cliente { get; set; }
+        public Cliente idCliente { get; set; }
         public Habitacion idHabitacion { get; set; }
     }
 }

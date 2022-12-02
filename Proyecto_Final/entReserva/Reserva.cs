@@ -8,6 +8,6 @@ namespace entReserva
 {
     public class Reserva
     {
-
+        
     }
 }

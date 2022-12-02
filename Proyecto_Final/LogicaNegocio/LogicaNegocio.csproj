@@ -45,8 +45,10 @@
     <Compile Include="logCliente.cs" />
     <Compile Include="logEstadoCliente.cs" />
     <Compile Include="logEstadoHabitacion.cs" />
+    <Compile Include="logEstadoReserva.cs" />
     <Compile Include="logEstadoServicio.cs" />
     <Compile Include="logHabitacion.cs" />
+    <Compile Include="logReserva.cs" />
     <Compile Include="logServicio.cs" />
     <Compile Include="logTipoCliente.cs" />
     <Compile Include="logTipoHabitacion.cs" />
@@ -79,9 +81,17 @@
       <Project>{f242e5df-6ad2-49c9-9474-dbf0da60da4d}</Project>
       <Name>entEstadoHabitacion</Name>
     </ProjectReference>
+    <ProjectReference Include="..\entEstadoReserva\entEstadoReserva.csproj">
+      <Project>{c07d2ad8-7fbe-4fdb-b09d-37b3c9fbc89d}</Project>
+      <Name>entEstadoReserva</Name>
+    </ProjectReference>
     <ProjectReference Include="..\entHabitacion\entHabitacion.csproj">
       <Project>{6ad1bb58-fb5b-4a12-b980-bd6319bdaa3c}</Project>
       <Name>entHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entReserva\entReserva.csproj">
+      <Project>{c43f15c8-e034-4e90-81f3-0fd5487b183f}</Project>
+      <Name>entReserva</Name>
     </ProjectReference>
     <ProjectReference Include="..\entServicio\entServicio.csproj">
       <Project>{d307f40f-3b99-483c-975d-739bdc456aa6}</Project>
